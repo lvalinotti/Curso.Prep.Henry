@@ -1,6 +1,6 @@
 <img  src='./logo.png' height='70px'>
 
-## Introducción - breve cambio
+## Introducción
 
 # Modulo 0 - Prep
 
