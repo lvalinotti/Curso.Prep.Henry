@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === null;
+const nuevoModulo = 21 % 5 === 1;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -56,7 +56,7 @@ function multiplica(x, y) {
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  var divideXY = x * y;
+  var divideXY = x / y;
   return divideXY;
 }
 
@@ -152,15 +152,15 @@ function elevarAlCuadrado(num) {
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  var cubo = math.pow(num, 3);
+  var cubo = Math.pow(num, 3);
   return cubo;
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  var exponente = Math.pow(num, exponent);
-  return esponente;
+  var elevado = Math.pow(num, exponent);
+  return elevado;
 }
 
 function redondearNumero(num) {
@@ -189,10 +189,10 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   if(numero > 0){
-    console.log("Es positivo")
+    return "Es positivo";
   }
   else if(numero < 0){
-    console.log("Es negativo");
+    return "Es negativo";
   }
   else {
     return false;
@@ -204,7 +204,7 @@ function agregarSimboloExclamacion(str) {
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
   var concatenada = str + "!";
-  console.log(concatenada);
+  return concatenada;
 }
 
 function combinarNombres(nombre, apellido) {
@@ -257,8 +257,8 @@ function deEuroAdolar(euro){
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
   var euro;
-  var conversion = euro * 1.20;
-  return euro + " euros corresponden a " + conversion + " dolares";
+  conversion = euro * 1.20;
+  return conversion;
 }
 
 
