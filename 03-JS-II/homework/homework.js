@@ -22,7 +22,7 @@ function mayoriaDeEdad(edad) {
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
   var edad;
-  if (edad > 18){
+  if (edad >= 18){
     return "Allowed";
   } else {
     return "Not allowed";
@@ -165,13 +165,20 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   var num1, num2, num3;
-  if(num1<0 || num2<0 || num3<0){
-  if(num1>num2>0 && num1>num3>0){
+  if(num1>num2 && num1>num3 && num1>0 && num2>0 && num3>0){
       return "Número 1 es mayor y positivo";
-    }
-    return "Hay negativos";
+  }
+  if(num1<0 || num2<0 || num3<0){
+      return "Hay negativos";
+   }
+   if(num1<num3 && num2<num3 && num2 !== 0 && num1 !==0){
+      num3++;
+      return num3;
+  }
+  if(num1===0 || num2===0 || num3===0){
+        return "Error";     
   }else{
-    return false;
+      return false;
   }
 }
 
@@ -209,11 +216,14 @@ function esVerdadero(valor){
   }
 }
 
-function tablaDelSeis(){
+function tablaDelSeis(n,m){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  var n, m;
+  for(var i=1; i <= n; i++){
+    return(i + " , " + i*m);
+  }
 }
 
 function tieneTresDigitos(numero){
