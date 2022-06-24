@@ -104,3 +104,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Archivos de práctica mios
+algoritmo_Pseint.psc 
+pruebas.js 

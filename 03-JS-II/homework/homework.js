@@ -216,17 +216,16 @@ function esVerdadero(valor){
   }
 }
 
-function tablaDelSeis(n,m){
+function tablaDelSeis(m){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  var n, m;
-  var resultado =[];
-  for(var i=0; i<n; i++){
-    resultado[i];
-    
-  }
-  return resultado;
+  var m;
+  let tablaDelSeis =[0];
+    for(var j=1; j<=m; j++){
+      tablaDelSeis.push(j*6);
+    }
+  return tablaDelSeis; 
 }
 
 function tieneTresDigitos(numero){
