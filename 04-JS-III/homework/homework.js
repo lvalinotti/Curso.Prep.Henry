@@ -3,16 +3,14 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  var elementos=array;
-  return elementos[0];
+  return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  var elementos=array;
-  var ultimoElemento=elementos[elementos.length - 1]
+  var ultimoElemento=array[array.length - 1]
   return ultimoElemento;
 }
 
@@ -20,8 +18,7 @@ function devolverUltimoElemento(array) {
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  var elementos=array;
-  var longitudArray=elementos.length;
+  var longitudArray=array.length;
   return longitudArray;
 }
 
@@ -31,11 +28,10 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  var elementos=array;
-  for(var i=0; i<elementos.length; i++){
-    elementos[i]=elementos[i]+1;
+  for(var i=0; i<array.length; i++){
+    array[i]=array[i]+1;
   }
-  return elementos;
+  return array;
 }
 
 
@@ -43,10 +39,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  var elementos=array;
   var elemento;
-  elementos.push(elemento);
-  return elementos;
+  array.push(elemento);
+  return array;
 }
 
 
@@ -55,10 +50,9 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  var elementos=array;
   var elemento;
-  elementos.unshift(elemento);
-  return elementos;
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -216,6 +210,22 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var array;
+  var mesesEncontrados = [];
+  for(var i=0; i<=array.length; i++){
+    if(array[i]==="Enero"){
+      mesesEncontrados.push("Enero");
+    }
+    if(array[i]==="Marzo"){
+      mesesEncontrados.push("Marzo");
+    }
+    if(array[i]==="Noviembre"){
+          mesesEncontrados.push("Noviembre");
+    }
+  }
+  if(mesesEncontrados.length===3){
+    return mesesEncontrados;
+  }else return "No se encontraron los meses pedidos";
 }
 
 
@@ -223,6 +233,18 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var array;
+  var valor=0;
+  var mayoresACien = [];
+  for(var i=0; i<=array.length; i++){
+    if(array[i]>100){
+      valor=array[i];
+      mayoresACien.push(valor);
+    }
+  }
+  if(mayoresACien.length!==0){
+    return mayoresACien;
+  }
 }
 
 
@@ -234,6 +256,16 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var arrayNumeros=[];
+  for(var i=0; i<10; i++){
+    numero=numero+2;
+    arrayNumeros.push(numero);
+  if(numero===i){
+      return "Se interrumpió la ejecución";
+      break;
+    }
+  }
+  return arrayNumeros;
 }
 
 
@@ -244,7 +276,18 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-}
+  var arrayNumeros=[];
+  for(var i=0; i<10; i++){
+ 
+    if(i===5){
+      continue;
+    }
+    numero=numero+2;
+    arrayNumeros.push(numero);
+  }
+    return arrayNumeros;
+  }
+
 
 
 // No modificar nada debajo de esta línea
